@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ezīša Zeķītes - Pasūtījumi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <a href="products-NEW.html" class="nav__logo">Ezīša Zeķītes</a>
+            <ul class="nav__links">
+                <li class="nav__link"><a href="products-NEW.html">Produkti</a></li>
+                <li class="nav__link nav__link--active"><a href="orders-NEW.html">Pasūtījumi</a></li>
+                <li class="nav__link"><a href="suppliers-NEW.html">Piegādātāji</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Pasūtījumi</h1>
+        
+        <section class="product-form-card">
+            <h2 class="product-form__title">Pievienot produktu</h2>
+            <form class="product-form">
+                <div class="product-form__field">
+                    <label class="product-form__label" for="product-name">Nosaukums</label>
+                    <input class="product-form__input" id="product-name" type="text" name="productName"
+                        placeholder="Produkta nosaukums" required />
+                </div>
+
+                <div class="product-form__field">
+                    <label class="product-form__label" for="product-image">Attēla saite</label>
+                    <input class="product-form__input" id="product-image" type="url" name="image"
+                        placeholder="https://.." required />
+                </div>
+
+                <div class="product-form__field">
+                    <label class="product-form__label" for="product-count">Daudzums</label>
+                    <input class="product-form__input" id="product-count" type="number" name="count" min="0"
+                        placeholder="10" required />
+                </div>
+
+                <div class="product-form__field">
+                    <label class="product-form__label" for="product-price">Cena</label>
+                    <input class="product-form__input" id="product-price" type="number" name="price" min="0.01"
+                        placeholder="2.99" step="0.01" required />
+                </div>
+
+                <button class="product-form__button" type="submit">Pievienot</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Pasūtījumu saraksts</h2>
+            <table class="order-table">
+                <thead>
+                    <tr>
+                        <th class="order-table__th">Pasūtījuma Nr.</th>
+                        <th class="order-table__th">Produkts</th>
+                        <th class="order-table__th">Daudzums</th>
+                        <th class="order-table__th">Statuss</th>
+                    </tr>
+                </thead>
+                <tbody id="orders-table-body">
+                    <tr>
+                        <td class="order-table__td">ORD001</td>
+                        <td class="order-table__td">Zeķītes 1</td>
+                        <td class="order-table__td">5</td>
+                        <td class="order-table__td"><span class="order-table__badge order-table__badge--new">Jauns</span></td>
+                    </tr>
+                    <tr>
+                        <td class="order-table__td">ORD002</td>
+                        <td class="order-table__td">Zeķītes 2</td>
+                        <td class="order-table__td">10</td>
+                        <td class="order-table__td"><span class="order-table__badge order-table__badge--process">Apstrādē</span></td>
+                    </tr>
+                    <tr>
+                        <td class="order-table__td">ORD003</td>
+                        <td class="order-table__td">Zeķītes 3</td>
+                        <td class="order-table__td">3</td>
+                        <td class="order-table__td"><span class="order-table__badge order-table__badge--delivered">Piegādāts</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ezīša Zeķītes. Visi tiesības aizsargātas.</p>
+    </footer>
+</body>
+</html>
